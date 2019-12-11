@@ -1,2 +1,1 @@
-include ':app', ':wanandroid', ':jetpack'
-rootProject.name='android'
+include ':wanandroid', ':jetpack', ':plib_code', ':plib_frame', ':plib_update'
