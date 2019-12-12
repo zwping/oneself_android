@@ -19,6 +19,23 @@
             android:layout_height="wrap_content"
             android:text="@={vm.title}" />
 
+
+        <win.zwping.code.review.PViewPager
+            android:id="@+id/pvp"
+            android:layout_width="match_parent"
+            android:background="#ccc"
+            android:layout_height="100dp"/>
+        <win.zwping.code.review.PViewPager
+            android:id="@+id/pvp1"
+            android:layout_width="match_parent"
+            android:background="#fcf"
+            android:layout_height="100dp"/>
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+
     </LinearLayout>
 
 </layout>
