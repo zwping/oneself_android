@@ -1,3 +1,8 @@
 package win.zwping.jetpack
 
-data class DataBean(var title: String)
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
+
+data class DataBean(@Bindable var title: String) : BaseObservable(){
+
+}

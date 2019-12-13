@@ -15,28 +15,16 @@ class FirstVmAc : BaseVmAc<AcFirestMvvmBinding>() {
     override fun bindVmLayout() = R.layout.ac_firest_mvvm
 
     override fun initView(savedInstanceState: Bundle?) {
-        bind.vm = DataBeanModel(DataBean("333"))
+        val m = DataBeanModel().apply { this.bean = DataBean("333")}
+        bind.vm = m
 
-        ss()
-        pvp1?.setAdapterFm(supportFragmentManager, listOf(FirstFm(), FirstFm()))
+        HandlerUtil.runOnUiThreadDelay({ bind.vm = m.ss("111") }, 2000)
 
-        HandlerUtil.runOnUiThreadDelay({
-            ss()
-        }, 2000)
-
+        pvp.setAdapterFm(supportFragmentManager, listOf(FirstVmFm(), FirstVmFm()))
         FragmentUtil.replace(supportFragmentManager, FirstVmFm(), R.id.fl)
     }
 
     override fun doBusiness() {
-    }
-
-    private fun ss() {
-        pvp?.adapter = object : FragmentStatePagerAdapter(supportFragmentManager,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT        ) {
-            override fun getItem(position: Int) = listOf(FirstVmFm(), FirstVmFm()).get(position)
-
-            override fun getCount() = 2
-
-        }
     }
 
 }

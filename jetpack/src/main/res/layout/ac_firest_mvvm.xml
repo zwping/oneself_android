@@ -17,7 +17,7 @@
             android:id="@+id/ptv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={vm.title}" />
+            android:text="@{vm.title}" />
 
 
         <win.zwping.code.review.PViewPager

@@ -1,11 +1,11 @@
 package win.zwping.jetpack
 
-class DataBeanModel(var bean: DataBean) {
+import androidx.databinding.BaseObservable
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
-    var title = bean.title
+class DataBeanModel : ViewModel() {
 
-    fun ss(s: String) {
-        bean.title = s
-    }
+    val bean by lazy { MutableLiveData<DataBean>() }
 
 }
