@@ -3,9 +3,10 @@ package win.zwping.jetpack
 import androidx.databinding.BaseObservable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import win.zwping.frame.mvvm.BaseVModel
 
-class DataBeanModel : ViewModel() {
+object DataBeanVModel : BaseVModel<DataBean>() {
 
-    val bean by lazy { MutableLiveData<DataBean>() }
 
 }
